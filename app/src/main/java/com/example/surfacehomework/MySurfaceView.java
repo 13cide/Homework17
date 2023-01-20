@@ -77,11 +77,11 @@ public class MySurfaceView extends SurfaceView implements SurfaceHolder.Callback
                     canvas = surfaceholder.lockCanvas();
                     canvas.drawColor(Color.CYAN);
                     canvas.drawCircle(circlePosition.first, circlePosition.second, 50, paint);
-
+                    surfaceholder.unlockCanvasAndPost(canvas);
                 }
             } catch (Exception ignored) {}
             finally {
-                surfaceholder.unlockCanvasAndPost(canvas);
+                
             }
         }
     }
